@@ -16,7 +16,7 @@
 
 MPwn 目前支持以下三种调用方式：
 
-### ✅ 1. `mpwn <executable>`
+### 1. `mpwn <executable>`
 
 自动匹配当前二进制所依赖的 libc 版本并附加调试：
 
