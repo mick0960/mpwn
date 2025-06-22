@@ -1,5 +1,7 @@
 # MPwn: Environment Configuration Tool for Pwn
 
+**仅支持Python3(3.10.x or higher)**
+
 ## 0x1 安装（Setup）
 
 只需一行命令：

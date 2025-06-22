@@ -19,7 +19,7 @@ import shutil
 import tempfile
 import tarfile
 
-def extract_deb(deb_path: str, output_dir: str):
+def extract_deb(deb_path: str, output_dir: str) -> None:
     """
     deb extractor
     """
