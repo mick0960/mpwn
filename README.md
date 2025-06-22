@@ -63,4 +63,11 @@ mpwn --fetch-all
     └── ...
 ```
 
+```bash
+~/.config/mpwn/
+.
+├── config.json # 配置文件
+├── list # fetch获得的libc版本
+└── template.py # 模板
+```
 ---
