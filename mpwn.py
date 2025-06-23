@@ -254,6 +254,12 @@ def handle_files(exe: str="", libc_version: str=None, arch: str=None):
     return temp
 
 def patch_program(exe: str="", libc_version: str=None):
+    """
+    Patch program with specified glibc version or use workdir's glibc if available.
+    If libc_version is provided, it will search for local and stored versions,
+    specified glibc version will be use or download as the final version is given.
+    If no version is specified, it will use the current working directory's libs.
+    """
     if not os.path.exists(f"./{exe}"):
         error("Unkown executable!")
     

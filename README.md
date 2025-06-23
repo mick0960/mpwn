@@ -73,3 +73,20 @@ mpwn --fetch-all
 └── template.py # 模板
 ```
 ---
+
+## 0x4 Config.json 字段说明
+用户可自定义的字段
+```json
+{
+    "script_name": "1.py", # 脚本名
+    "author": "mick0960", # 作者
+    "fields": "value" # 自由字段，可随意添加或修改
+    ...
+}
+```
+MPwn默认添加字段
+```json
+ "time": # 时间
+"filename": # 脚本检测到的可执行文件名
+"libcname": # 脚本检测到的libc
+```
