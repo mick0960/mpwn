@@ -7,11 +7,9 @@ name = "mpwn"
 version = "2.0.0"
 description = "Environment Configuration Tool for Pwn Challenges"
 readme = "README.md"
-license = {text = "MIT"}
+license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [
-    {name = "mick0960"}
-]
+authors = [{ name = "mick0960" }]
 keywords = ["pwn", "ctf", "glibc", "patchelf", "exploit"]
 classifiers = [
     "Development Status :: 4 - Beta",
@@ -32,14 +30,11 @@ dependencies = [
     "jinja2>=3.0.0",
     "python-magic>=0.4.27",
     "zstandard>=0.20.0",
+    "pwntools>=4.10.0",
 ]
 
 [project.optional-dependencies]
-dev = [
-    "pytest>=7.0.0",
-    "pytest-cov>=4.0.0",
-    "mypy>=1.0.0",
-]
+dev = ["pytest>=7.0.0", "pytest-cov>=4.0.0", "mypy>=1.0.0"]
 
 [project.scripts]
 mpwn = "mpwn.cli:main"
