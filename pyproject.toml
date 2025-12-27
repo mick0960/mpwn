@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mpwn"
+version = "2.0.0"
+description = "Environment Configuration Tool for Pwn Challenges"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "mick0960"}
+]
+keywords = ["pwn", "ctf", "glibc", "patchelf", "exploit"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+dependencies = [
+    "requests>=2.28.0",
+    "beautifulsoup4>=4.11.0",
+    "prettytable>=3.0.0",
+    "jinja2>=3.0.0",
+    "python-magic>=0.4.27",
+    "zstandard>=0.20.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0",
+    "pytest-cov>=4.0.0",
+    "mypy>=1.0.0",
+]
+
+[project.scripts]
+mpwn = "mpwn.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/mick0960/mpwn"
+Repository = "https://github.com/mick0960/mpwn"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mpwn*"]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
