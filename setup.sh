@@ -62,19 +62,7 @@ libc = ELF(libc_name) if libc_name else None
 
 #================== Connection ==================#
 p = conn(elf_name, host, port)
-setup(p, elf, libc)  # Setup global objects for simplified usage
-
-#================== Exploit ==================#
-
-# Now you can use shortcuts directly:
-# sla(b'name: ', b'admin')           # sendlineafter
-# sl(payload)                        # sendline
-# addr = leak64(b'\x7f', 6)          # leak 64-bit address
-# libc_base = leak('libc', addr - libc.symbols['puts'])
-# debug(0x1234)                      # attach gdb with breakpoint
-# lg(libc_base)                      # log variable with auto-name detection
-
-# Your exploit code here
+setup(p, elf, libc)
 
 
 p.interactive()
